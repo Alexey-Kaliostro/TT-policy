@@ -50,31 +50,23 @@ ul li::before {
   content: "•";
   color: black;
 }
-.unordered-list {
-  list-style-type: none;
-}
 
-.unordered-list:not(OL) {
-  counter-reset: li;
+OL {
+  counter-reset: item;
   padding-left: 10px;
 }
-.unordered-list:not(LI) {
+LI {
   display: block;
 }
-.unordered-list:not(LI:before) {
-  content: counters(li, ".") ".";
+LI:before {
+  content: counters(item, ".") ".";
 
-  counter-increment: li;
+  counter-increment: item;
 }
 
-.unordered-list:not(li.main-list-item::before) {
+li.main-list-item::before {
   font-weight: bold;
   color: red;
-}
-
-li.main-list-item::marker {
-  color: red;
-  font-weight: bold;
 }
 
 .main-list-item {
