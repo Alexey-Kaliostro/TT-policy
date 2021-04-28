@@ -1,0 +1,85 @@
+/*========== MAIN GEOMETRY ===============*/
+
+body {
+  margin: 30px;
+  background-color: white;
+}
+
+.container {
+  width: 890px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px lightgrey solid;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+/* ========= T A B L E ==============*/
+
+.policy-table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td,
+th {
+  padding: 5px;
+
+  border: 1px solid black;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table-header {
+  font-weight: bold;
+  font-style: italic;
+  color: red;
+}
+
+.financial-span {
+  background-color: lightgray;
+}
+
+/*=========== E N D   O F   T A B L E =====================*/
+
+/* ================= ORDERED LISTS UNORDERED LISTS ========================*/
+
+ul li::before {
+  content: "•";
+  color: black;
+}
+
+OL {
+  counter-reset: item;
+  padding-left: 10px;
+}
+LI {
+  display: block;
+}
+LI:before {
+  content: counters(item, ".") ".";
+
+  counter-increment: item;
+}
+
+li.main-list-item::before {
+  font-weight: bold;
+  color: red;
+}
+
+.main-list-item {
+  margin-top: 10px;
+}
+
+p {
+  margin: 0;
+}
+
+.list-item-content {
+  color: red;
+  font-weight: bold;
+  margin-left: 10px;
+  display: inline;
+}
